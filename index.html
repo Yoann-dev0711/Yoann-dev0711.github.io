@@ -20,7 +20,8 @@
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            height: 100vh;
+            height: auto; /* Ajustement de la hauteur pour mobile */
+            min-height: 50vh; /* Hauteur minimale pour éviter un espace trop réduit */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -55,13 +56,22 @@
         }
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 10px; /* Réduction du padding pour mobile */
             background-color: #0066cc;
             color: white;
+            margin-top: 20px; /* Ajout d'une marge supérieure pour séparer du contenu */
         }
         p {
             font-family: 'Lora', serif;
             /* Pas de transformation de texte ici */
+        }
+        @media (max-width: 768px) {
+            header {
+                min-height: 30vh; /* Réduction de la hauteur minimale pour mobile */
+            }
+            footer {
+                padding: 5px; /* Réduction supplémentaire du padding pour mobile */
+            }
         }
     </style>
 </head>
@@ -120,11 +130,4 @@
             <h2>Merci d’être là !</h2>
             <p>Votre présence signifie beaucoup pour nous. Ce mariage, c’est aussi une fête de l’amitié, de l’amour et du partage. Merci de nous accompagner pour ce chapitre si précieux de notre vie. Nous avons hâte de célébrer avec vous, de danser ensemble, de créer des souvenirs et de vibrer d’émotion.</p>
             <p>Avec tout notre amour,</p>
-            <p>Salma & Yoann</p>
-        </div>
-    </div>
-    <footer>
-        <p>&copy; 2023 Mariage de Salma & Yoann. Tous droits réservés.</p>
-    </footer>
-</body>
-</html>
+            <p>Salma & Yoann
